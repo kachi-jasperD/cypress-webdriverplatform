@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-08-25T19:25:23.401Z",
+    "end": "2023-08-25T19:25:23.682Z",
+    "duration": 281,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a30163de-6d77-4a2c-ba87-68be28a72e5d",
+      "title": "",
+      "fullFile": "cypress/e2e/automation-test-store/same-origin-policy.js",
+      "file": "cypress/e2e/automation-test-store/same-origin-policy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "80bc40c2-c915-415b-b0dc-38ae5c339905",
+          "title": "Cypress web security",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Origin command",
+              "fullTitle": "Cypress web security Origin command",
+              "timedOut": null,
+              "duration": 255,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.origin(\"webdriveruniversity.com\", () => {\n  cy.visit(\"/\");\n});\ncy.origin(\"automationteststore.com\", () => {\n  cy.visit(\"/\");\n});\n// cy.visit(\"https://www.webdriveruniversity.com/\");\n// cy.visit(\"https://selectors.webdriveruniversity.com/\");",
+              "err": {
+                "message": "CypressError: `cy.origin()` requires the first argument to be a different domain than top. You passed `webdriveruniversity.com` to the origin command, while top is at `https://webdriveruniversity.com`.\n\nEither the intended page was not visited prior to running the cy.origin block or the cy.origin block may not be needed at all.\n\nhttps://on.cypress.io/origin",
+                "estack": "CypressError: `cy.origin()` requires the first argument to be a different domain than top. You passed `webdriveruniversity.com` to the origin command, while top is at `https://webdriveruniversity.com`.\n\nEither the intended page was not visited prior to running the cy.origin block or the cy.origin block may not be needed at all.\n\nhttps://on.cypress.io/origin\n    at Validator.validateLocation (https://webdriveruniversity.com/__cypress/runner/cypress_runner.js:148164:76)\n    at Context.origin (https://webdriveruniversity.com/__cypress/runner/cypress_runner.js:147797:17)\n    at wrapped (https://webdriveruniversity.com/__cypress/runner/cypress_runner.js:160610:43)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/automation-test-store/same-origin-policy.js:13:7)",
+                "diff": null
+              },
+              "uuid": "d7944319-2abc-4236-bac0-5ab435bd952d",
+              "parentUUID": "80bc40c2-c915-415b-b0dc-38ae5c339905",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d7944319-2abc-4236-bac0-5ab435bd952d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 255,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

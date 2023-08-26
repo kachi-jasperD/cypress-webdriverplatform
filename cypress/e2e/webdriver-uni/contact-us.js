@@ -78,7 +78,7 @@ describe("Test Contact Us Form via WebdriverUni", () => {
     cy.get("body").contains("Error: all fields are required");
     cy.get("body").contains("Error: Invalid email address");
   });
-  it.only("Negative viewport test", () => {
+  it("Negative viewport test", () => {
     // cypress code
     cy.negativeViewportTest();
     cy.title().should("include", "WebDriver | Contact Us");
