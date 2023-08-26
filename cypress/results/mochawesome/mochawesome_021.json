@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-25T19:26:40.047Z",
+    "end": "2023-08-25T19:26:42.283Z",
+    "duration": 2236,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3091a156-9e64-4d5c-93a3-0026f4e1a476",
+      "title": "",
+      "fullFile": "cypress/e2e/webdriver-uni/radio-buttons.js",
+      "file": "cypress/e2e/webdriver-uni/radio-buttons.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2ea00cd3-2eb8-4279-8741-20f2fd877ce2",
+          "title": "Verify radio-buttons via webdriver uni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check and validate radio",
+              "fullTitle": "Verify radio-buttons via webdriver uni Check and validate radio",
+              "timedOut": null,
+              "duration": 1711,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//prone to failure selector is not so unique\n// cy.get('[value=\"blue\"]').check();\ncy.get(\"#radio-buttons\").find(\"[type='radio']\").first().check();\ncy.get(\"#radio-buttons\").find(\"[type='radio']\").eq(4).check();\ncy.get(\"#radio-buttons [type='radio']\").eq(3).check();",
+              "err": {},
+              "uuid": "694b0a24-9228-454e-b521-60d0af961ce7",
+              "parentUUID": "2ea00cd3-2eb8-4279-8741-20f2fd877ce2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate the state of specific radio button",
+              "fullTitle": "Verify radio-buttons via webdriver uni Validate the state of specific radio button",
+              "timedOut": null,
+              "duration": 512,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// cy.get(\"#radio-buttons-selected-disabled\")\n//   .find(\"[value='lettuce']\")\n//   .check();\ncy.get(\"[value='lettuce']\").should(\"not.be.checked\");\ncy.get(\"[value='pumpkin']\").should(\"be.checked\");\ncy.get(\"[value='lettuce']\").check();\ncy.get(\"[value='pumpkin']\").should(\"not.be.checked\");\ncy.get(\"[value='cabbage']\").should(\"have.attr\", \"disabled\");\ncy.get(\"[value='cabbage']\").should(\"be.disabled\");",
+              "err": {},
+              "uuid": "f0aaa5f2-2ea5-4674-a941-91e91df167e0",
+              "parentUUID": "2ea00cd3-2eb8-4279-8741-20f2fd877ce2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "694b0a24-9228-454e-b521-60d0af961ce7",
+            "f0aaa5f2-2ea5-4674-a941-91e91df167e0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2223,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
