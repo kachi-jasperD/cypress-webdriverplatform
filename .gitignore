@@ -1,1 +1,15 @@
 cypress/e2e/office-work
+
+node_modules
+
+cypress/videos
+
+cypress/screenshots
+
+cypress/results
+
+cypress/downloads
+
+cypress/reports
+
+package-lock.json
